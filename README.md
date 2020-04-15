@@ -3,7 +3,7 @@ Use pushover with your Vera!
 
 ## Getting Started
 
-Do you have a Vera Smart Home Controller and want push notifications when stuff happens? Follow the attached guide and 
+Do you have a Vera Smart Home Controller and want push notifications when stuff happens? Follow the attached guide and you can setup custom alerts directly using PushOver API.
 
 
 ### Prerequisites
@@ -42,6 +42,19 @@ Subject line of message (i.e. Door opened)
 -1 = Low priority
 
 Additional variables as supported by [Pushover](https://pushover.net/api)
+
+## Debuging Lua Code
+
+You can view Lua log files on your controller by going the following URL:  
+http://<Your Vera Controller IP>/port_3480/data_request?id=lua
+
+Another helpful troubleshooting tool is to execute Lua code locally on the controller. To do this you will need to enable SSH on the Vera:
+http://wiki.micasaverde.com/index.php/Logon_Vera_SSH
+
+Onced logged in
+```bash
+root@MiOS_$$$$$:~# lua script-test.lua
+```
 
 ## Additional resources
 
